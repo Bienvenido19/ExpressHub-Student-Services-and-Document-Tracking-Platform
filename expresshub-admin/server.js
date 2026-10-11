@@ -7,6 +7,17 @@ const rateLimit = require('express-rate-limit');
 const bcrypt = require('bcryptjs');
 const mysql = require('mysql2/promise');
 const nodemailer = require('nodemailer');
+const MySQLStore = require('express-mysql-session')(session);
+const sessionStore = new MySQLStore({
+  host: process.env.DB_HOST || 'localhost',
+  port: Number(process.env.DB_PORT || 3306),
+  user: process.env.DB_USER || 'root',
+  password: process.env.DB_PASSWORD || '',
+  database: process.env.DB_NAME || 'expresshub',
+  ssl: process.env.DB_HOST && process.env.DB_HOST !== 'localhost'
+    ? { minVersion: 'TLSv1.2', rejectUnauthorized: true }
+    : undefined,
+});
 
 if (!process.env.SESSION_SECRET) {
   console.error('Missing SESSION_SECRET in .env (see .env.example).');
@@ -111,9 +122,11 @@ app.use(
   })
 );
 app.use(express.json({ limit: '50kb' }));
+app.set('trust proxy', 1);
 app.use(
   session({
     name: 'eh.sid',
+    store: sessionStore,
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
@@ -125,6 +138,7 @@ app.use(
     },
   })
 );
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 const wrap = (fn) => (req, res, next) => fn(req, res, next).catch(next);
