@@ -20,7 +20,7 @@ function sanitizeText(value: unknown, maxLength: number) {
 function makeRequestNumber() {
   const now = new Date();
   const stamp = `${now.getFullYear()}${String(now.getMonth() + 1).padStart(2, "0")}${String(now.getDate()).padStart(2, "0")}`;
-  const random = randomBytes(6).toString("hex").toUpperCase();
+  const random = randomBytes(3).toString("hex").toUpperCase();
   return `REQ-${stamp}-${random}`;
 }
 
@@ -93,7 +93,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         ok: false,
-        error: "DEBUG: " + (error instanceof Error ? error.message : String(error)),
+        error: "The request could not be submitted right now. Please try again later.",
       },
       { status: 500 }
     );
