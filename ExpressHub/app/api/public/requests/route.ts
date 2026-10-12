@@ -93,7 +93,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         ok: false,
-        error: "The request service is not connected to the admin database yet. Please verify the DB credentials and schema.",
+        error: "DEBUG: " + (error instanceof Error ? error.message : String(error)),
       },
       { status: 500 }
     );
