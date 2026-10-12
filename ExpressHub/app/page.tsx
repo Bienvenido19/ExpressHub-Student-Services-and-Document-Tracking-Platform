@@ -101,7 +101,7 @@ export default function HomePage() {
 
   return (
     <main>
-      <div className="bg-primary px-5 py-3 text-white">
+      <div className="bg-primary px-5 py-3 text-white hidden">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3">
           <p className="text-sm">Midterm academic clearance window is now open across all 3 campuses.</p>
           <a href="/staff/login" className="text-sm font-semibold hover:underline">Staff Portal / Admin Access →</a>
@@ -160,7 +160,7 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div id="schedules-section" className="mt-16">
+          <div id="schedules-section" className="mt-16 hidden">
             <p className="font-inter text-xs font-bold uppercase tracking-widest text-secondary">Academic Schedules</p>
             <h3 className="mt-2 text-2xl font-bold">Key Semester Timelines & Critical Deadlines</h3>
             <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

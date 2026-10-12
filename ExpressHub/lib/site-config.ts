@@ -11,11 +11,11 @@ export const siteConfig = {
   timezone: "Asia/Manila",
   locationLabel: "[Meron Din Namang Palang Ganda Ang Buhay school Campus Services Hall]",
   documentTypes: [
-    { code: "OTR", name: "Official Transcript of Records (OTR)", description: "Certified transcript for employment, graduation, board exams, or school transfer.", turnaroundText: "3–5 Working Days", icon: "description" },
+    { code: "OTR", name: "Official Transcript of Records (OTR)", description: "Certified transcript for employment, graduation, board exams, or school transfer.", turnaroundText: "1-2 Working Days", icon: "description" },
     { code: "GRD", name: "Certificate of Grades", description: "Semester grade verification for scholarship or academic residency requirements.", turnaroundText: "1–2 Working Days", icon: "grade" },
     { code: "ENR", name: "Certificate of Enrollment / Registration", description: "Official enrollment certification for scholarships, internships, and validation.", turnaroundText: "24–48 Hours", icon: "badge" },
-    { code: "CLR", name: "University Clearance Form", description: "Administrative clearance confirmation for students.", turnaroundText: "2–3 Working Days", icon: "check_circle" },
-    { code: "TRF", name: "Shifting & Transfer Credentials", description: "Documents supporting internal academic movement and transfer requests.", turnaroundText: "3–5 Working Days", icon: "swap_horiz" }
+    { code: "CLR", name: "University Clearance Form", description: "Administrative clearance confirmation for students.", turnaroundText: "1-2 Working Days", icon: "check_circle" },
+    { code: "TRF", name: "Shifting & Transfer Credentials", description: "Documents supporting internal academic movement and transfer requests.", turnaroundText: "1-2 Working Days", icon: "swap_horiz" }
   ],
   announcements: [
     { category: "Urgent Clearance", date: "Nov 14, 2025", title: "Midterm Clearance & Deficiencies Locking", body: "Students with unsettled laboratory, library, or administrative deficiencies should process clearance vouchers before portal lockout.", office: "Office of the University Registrar" },
