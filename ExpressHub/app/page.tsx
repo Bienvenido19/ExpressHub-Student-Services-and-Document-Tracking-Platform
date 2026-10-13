@@ -113,7 +113,6 @@ export default function HomePage() {
           <a href="#" className="text-xl font-extrabold">{siteConfig.portalName}</a>
           <div className="flex flex-wrap gap-5 text-sm font-semibold">
             <a href="#announcements-section" className="hover:text-secondary">Announcements</a>
-            <a href="#schedules-section" className="hover:text-secondary">Schedules</a>
             <a href="#services-section" className="hover:text-secondary">Services</a>
             <a href="#tracking-section" className="hover:text-secondary">Track request</a>
             <a href="#request-section" className="hover:text-secondary">Request</a>
@@ -228,7 +227,7 @@ export default function HomePage() {
             <label className="grid gap-2 font-inter text-sm font-semibold">Document type<select name="document_type" value={formState.document_type} onChange={onChange} className="rounded-lg bg-surface-container-low px-4 py-3 font-jakarta font-normal"><option value="">Choose a document</option>{siteConfig.documentTypes.map((doc) => <option key={doc.code} value={doc.code}>{doc.name}</option>)}</select></label>
             <label className="grid gap-2 font-inter text-sm font-semibold">Purpose<textarea name="purpose" value={formState.purpose} onChange={onChange} rows={3} className="rounded-lg bg-surface-container-low px-4 py-3 font-jakarta font-normal" /></label>
             <label className="grid gap-2 font-inter text-sm font-semibold">Additional notes<textarea name="notes" value={formState.notes} onChange={onChange} rows={2} className="rounded-lg bg-surface-container-low px-4 py-3 font-jakarta font-normal" /></label>
-            <p className="rounded-lg bg-surface-container-low p-4 text-xs leading-5 text-on-surface-variant">REVIEW REQUIRED: Data Privacy Act notice and consent wording must be approved by the university Data Protection Officer before use.</p>
+            <p className="rounded-lg bg-surface-container-low p-4 text-xs leading-5 text-on-surface-variant">Data Privacy Act notice and consent wording must be approved by the university Data Protection Officer before use.</p>
             {statusMessage ? <p className="rounded-lg bg-secondary-container px-3 py-3 text-sm font-medium text-on-surface">{statusMessage}</p> : null}
             <button type="submit" className="rounded-lg bg-primary px-5 py-4 font-inter text-sm font-semibold text-white">Submit request</button>
           </form>
