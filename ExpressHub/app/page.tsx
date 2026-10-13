@@ -135,16 +135,16 @@ export default function HomePage() {
             </div>
             <p className="mt-5 text-xs text-on-surface-variant">Planning figures from the case study are not verified service results.</p>
           </div>
-          <div className="flex min-h-72 items-center justify-center rounded-2xl bg-surface-container p-8 text-center">
-            <div>
-              <span className="material-symbols-outlined text-5xl text-secondary" aria-hidden="true">school</span>
-              <p className="mt-3 font-semibold">Meron Din Namang Palang Ganda Ang Buhay School Student Services</p>
-              <p className="mt-1 text-sm text-on-surface-variant">Campus image can be added here.</p>
-            </div>
-          </div>
+          <div className="flex min-h-72 items-center justify-center overflow-hidden rounded-2xl bg-surface-container">
+  <img
+    src="/campus.jpg"
+    alt="Campus"
+    className="h-full min-h-72 w-full object-cover"
+  />
+</div>
+
         </div>
       </section>
-
       <section id="announcements-section" className="bg-surface-container-low px-5 py-16">
         <div className="mx-auto max-w-7xl">
           <p className="font-inter text-xs font-bold uppercase tracking-widest text-secondary">Student Information & Official Updates</p>
