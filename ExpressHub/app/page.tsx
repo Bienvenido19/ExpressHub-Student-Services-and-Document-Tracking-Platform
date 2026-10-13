@@ -136,15 +136,15 @@ export default function HomePage() {
             <p className="mt-5 text-xs text-on-surface-variant">Planning figures from the case study are not verified service results.</p>
           </div>
           <div className="flex min-h-72 items-center justify-center overflow-hidden rounded-2xl bg-surface-container">
-  <img
-    src="/campus.jpg"
-    alt="Campus"
-    className="h-full min-h-72 w-full object-cover"
-  />
-</div>
-
+         <img
+             src="/campus.png"
+             alt="Campus"
+            className="h-full min-h-72 w-full object-cover"
+                  />
+          </div>
         </div>
       </section>
+      
       <section id="announcements-section" className="bg-surface-container-low px-5 py-16">
         <div className="mx-auto max-w-7xl">
           <p className="font-inter text-xs font-bold uppercase tracking-widest text-secondary">Student Information & Official Updates</p>
